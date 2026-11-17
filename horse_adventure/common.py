@@ -1,0 +1,1 @@
+Pos = tuple[int, int]
