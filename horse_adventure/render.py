@@ -2,9 +2,7 @@ from .game import Game, State
 from .room import Room, WIDTH, HEIGHT
 from .common import Pos
 from .data import (
-    CONTROLS, ESCAPE_HINT, LEGEND, PLAY_HEADER, SANDBOX_HEADER, START_PROMPT,
-    SUBTITLE, TITLE,
-    WIN_MESSAGE, WIN_PROMPT, YOU_WIN_ART,
+        CONTROLS, ESCAPE_HINT, ESCAPE_HINT2, LEGEND, PLAY_HEADER, SANDBOX_HEADER, START_PROMPT, SUBTITLE, TITLE, WIN_MESSAGE, WIN_PROMPT, YOU_WIN_ART,
 )
 
 
@@ -70,9 +68,10 @@ def render_menu(game: Game) -> list[str]:
     rows = place_centered(rows, 2, TITLE)
     rows = place_centered(rows, 3, "=" * len(TITLE))
     rows = place_centered(rows, 4, SUBTITLE)
-    rows = place_block(rows, (3, 7), CONTROLS)
-    rows = place_block(rows, (3, 15), LEGEND)
-    rows = place_text(rows, (3, 20), ESCAPE_HINT)
+    rows = place_block(rows, (3, 6), CONTROLS)
+    rows = place_block(rows, (3, 14), LEGEND)
+    rows = place_text(rows, (3, 19), ESCAPE_HINT)
+    rows = place_text(rows, (3, 20), ESCAPE_HINT2)
     rows = place_centered(rows, 22, START_PROMPT)
 
     sandbox = render_room_rows(game.sandbox)

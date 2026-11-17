@@ -17,6 +17,7 @@ LEGEND = [
 ]
 
 ESCAPE_HINT = "press escape once in the game to return to menu"
+ESCAPE_HINT2 = "this action saves all progress"
 START_PROMPT = "press <enter> to start"
 
 PLAY_HEADER = "## - press <escape> to return to menu - "
